@@ -1,1 +1,37 @@
+# Visual Studio / VS Code temporary files
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build output / binaries (Bắt buộc loại bỏ để tránh xung đột dung lượng và hệ thống)
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Tt]emp/
+[Tt]mp/
+x64/
+x86/
+build/
+bld/
+
+# Diagnostics / Profiler
+*.pid
+*.seed
+*.log
+
+# NuGet Packages & local databases
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.db
+*.db-shm
+*.db-wal
+
+# Environment variables & Sensitive data (Bảo mật tuyệt đối file chứa mật khẩu)
 .env
+.env.*
+!.env.example
