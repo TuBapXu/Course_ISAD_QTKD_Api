@@ -14,6 +14,14 @@ namespace QTKD.Api.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
+            // Cấu hình lưu Enum ContractStatus dưới dạng chuỗi (string) trong database
+            modelBuilder.Entity<Contract>()
+                .Property(c => c.Status)
+                .HasConversion<string>()
+                .HasMaxLength(50);
+
             modelBuilder.Entity<Contract>()
                 .HasOne(c => c.Customer)
                 .WithMany(cu => cu.Contracts)
@@ -24,13 +32,12 @@ namespace QTKD.Api.Data
                 .WithMany(pl => pl.PriceItems)
                 .HasForeignKey(pi => pi.PriceListId);
 
-            // Dữ liệu mẫu
+            // Dữ liệu mẫu (Seed Data)
             modelBuilder.Entity<Customer>().HasData(
                 new Customer { Id = 1, Name = "Công ty Minh Phát", Status = "Active" },
                 new Customer { Id = 2, Name = "Công ty ABC", Status = "Active" }
             );
 
-            // SỬA Ở ĐÂY: Thêm 0, 0, 0, DateTimeKind.Utc
             modelBuilder.Entity<Contract>().HasData(
                 new Contract { 
                     Id = 1, 
@@ -38,11 +45,12 @@ namespace QTKD.Api.Data
                     CustomerId = 1, 
                     StartDate = new DateTime(2026, 1, 1, 0, 0, 0, DateTimeKind.Utc), 
                     EndDate = new DateTime(2027, 1, 1, 0, 0, 0, DateTimeKind.Utc), 
-                    Status = "Draft" 
+                    Status = ContractStatus.Draft,
+                    FileUrl = null,
+                    ContractContent = null
                 }
             );
 
-            // SỬA Ở ĐÂY: Thêm 0, 0, 0, DateTimeKind.Utc
             modelBuilder.Entity<PriceList>().HasData(
                 new PriceList { 
                     Id = 1, 

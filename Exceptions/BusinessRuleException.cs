@@ -1,13 +1,23 @@
+using System;
+using System.Collections.Generic;
+
 namespace QTKD.Api.Exceptions
 {
-    // Lớp này kế thừa từ lớp Exception gốc của C#
-    // Chuyên dùng để báo lỗi vi phạm quy tắc nghiệp vụ (ví dụ: Không đạt chuẩn CTR-02)
+    // Chuyên dùng để báo lỗi vi phạm quy tắc nghiệp vụ (ví dụ: Không đạt chuẩn CTR-02 -> 400 Bad Request)
     public class BusinessRuleException : Exception
     {
-        // Constructor nhận vào một chuỗi thông báo lỗi (message)
-        // và truyền ngược chuỗi đó (base) lên cho lớp cha Exception xử lý
+        public List<string> Errors { get; }
+
+        // Hỗ trợ ném nhiều lỗi cùng lúc (dùng cho mảng 400 Bad Request theo CTR-02 và AC03)
+        public BusinessRuleException(List<string> errors) : base("Không đáp ứng quy tắc nghiệp vụ")
+        {
+            Errors = errors;
+        }
+
+        // Hỗ trợ ném 1 lỗi
         public BusinessRuleException(string message) : base(message)
         {
+            Errors = new List<string> { message };
         }
     }
 }

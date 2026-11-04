@@ -1,6 +1,170 @@
-@QTKD.Api_HostAddress = http://localhost:5182
+@HostAddress = http://localhost:5182
 
-GET {{QTKD.Api_HostAddress}}/weatherforecast/
+### ===================================================
+### PHẦN 1: QUẢN LÝ KHÁCH HÀNG (CUSTOMER)
+### ===================================================
+
+### 1.1 Lấy danh sách khách hàng
+GET {{HostAddress}}/api/customers
 Accept: application/json
 
-###
+### 1.2 Lấy chi tiết khách hàng ID = 1
+GET {{HostAddress}}/api/customers/1
+Accept: application/json
+
+### 1.3 Tạo khách hàng mới (Hợp lệ)
+POST {{HostAddress}}/api/customers
+Content-Type: application/json
+
+{
+  "name": "Công ty TNHH Vận Tải Biển Đông",
+  "status": "Active"
+}
+
+### 1.4 Tạo khách hàng thiếu tên (Kỳ vọng: 400 Bad Request)
+POST {{HostAddress}}/api/customers
+Content-Type: application/json
+
+{
+  "name": "",
+  "status": "Active"
+}
+
+### 1.5 Cập nhật khách hàng ID = 1
+PUT {{HostAddress}}/api/customers/1
+Content-Type: application/json
+
+{
+  "name": "Công ty TNHH Minh Phát Logistics",
+  "status": "Active"
+}
+
+### ===================================================
+### PHẦN 2: BẢNG GIÁ & DỊCH VỤ (PRICING)
+### ===================================================
+
+### 2.1 Xem danh sách bảng giá kèm dịch vụ
+GET {{HostAddress}}/api/prices
+Accept: application/json
+
+### 2.2 Xem chi tiết bảng giá ID = 1
+GET {{HostAddress}}/api/prices/1
+Accept: application/json
+
+### 2.3 Tạo bảng giá mới
+POST {{HostAddress}}/api/prices
+Content-Type: application/json
+
+{
+  "name": "Bảng giá Logistics 2026",
+  "effectiveDate": "2026-06-01T00:00:00Z"
+}
+
+### 2.4 Thêm đơn giá dịch vụ hợp lệ vào Bảng giá ID = 1
+POST {{HostAddress}}/api/prices/1/items
+Content-Type: application/json
+
+{
+  "serviceCode": "PORT_STORAGE",
+  "unitPrice": 1500000
+}
+
+### 2.5 Thêm đơn giá không hợp lệ <= 0 (Kỳ vọng: 400 Bad Request)
+POST {{HostAddress}}/api/prices/1/items
+Content-Type: application/json
+
+{
+  "serviceCode": "PORT_SECURITY",
+  "unitPrice": -50000
+}
+
+
+### ===================================================
+### PHẦN 3: HỢP ĐỒNG & LUỒNG US03 - GỬI TRÌNH DUYỆT
+### (KỊCH BẢN DEMO XUYÊN SUỐT TUẦN 06 THEO ĐỀ BÀI)
+### ===================================================
+
+### 3.1 Xem thông tin hợp đồng mẫu ID = 1 (Hiện đang là Draft)
+GET {{HostAddress}}/api/contracts/1
+Accept: application/json
+
+### 3.2 Tạo một hợp đồng mới ở trạng thái Draft (Thiếu tệp & nội dung để test)
+POST {{HostAddress}}/api/contracts
+Content-Type: application/json
+
+{
+  "contractNo": "HD-2026-DEMO",
+  "customerId": 1,
+  "startDate": "2026-02-01T00:00:00Z",
+  "endDate": "2027-02-01T00:00:00Z",
+  "fileUrl": null,
+  "contractContent": null
+}
+
+### 3.3 Test AC01: Gửi trình duyệt khi KHÔNG có quyền Sales (Kỳ vọng: 403 Forbidden)
+POST {{HostAddress}}/api/contracts/1/submit
+X-User-Role: Guest
+Content-Type: application/json
+
+{
+  "comment": "Trình duyệt hợp đồng"
+}
+
+### 3.4 Test AC03 / CTR-02: Gửi trình duyệt khi thiếu tệp và thiếu Quốc hiệu (Kỳ vọng: 400 Bad Request)
+POST {{HostAddress}}/api/contracts/1/submit
+X-User-Role: Sales
+Content-Type: application/json
+
+{
+  "comment": "Trình duyệt hợp đồng HD-2026-018"
+}
+
+### 3.5 Bổ sung dữ liệu hợp đồng (Cập nhật FileUrl và Nội dung có Quốc hiệu)
+PUT {{HostAddress}}/api/contracts/1
+Content-Type: application/json
+
+{
+  "fileUrl": "https://storage.qtkd.vn/contracts/HD-2026-018.pdf",
+  "contractContent": "Cộng hòa xã hội chủ nghĩa Việt Nam - Độc lập Tự do Hạnh phúc. Hợp đồng cung cấp dịch vụ cảng biển..."
+}
+
+### 3.6 Test AC04 & CTR-03: Gửi trình duyệt hợp lệ (Kỳ vọng: 200 OK -> Chuyển PendingApproval, tạo ApprovalId)
+POST {{HostAddress}}/api/contracts/1/submit
+X-User-Role: Sales
+Idempotency-Key: KEY-SUBMIT-2026-018
+Content-Type: application/json
+
+{
+  "comment": "Đã hoàn thiện đầy đủ hồ sơ và trình duyệt."
+}
+
+### 3.7 Test AC05: Gửi lặp lại cùng Idempotency-Key (Kỳ vọng: 200 OK -> Trả lại ApprovalId cũ, không tạo trùng)
+POST {{HostAddress}}/api/contracts/1/submit
+X-User-Role: Sales
+Idempotency-Key: KEY-SUBMIT-2026-018
+Content-Type: application/json
+
+{
+  "comment": "Gửi lại lần nữa với cùng key"
+}
+
+### 3.8 Test AC02: Cố tình gửi lại nhưng không có key / sai trạng thái (Kỳ vọng: 409 Conflict)
+POST {{HostAddress}}/api/contracts/1/submit
+X-User-Role: Sales
+Content-Type: application/json
+
+{
+  "comment": "Cố tình gửi lại khi hợp đồng đã ở PendingApproval"
+}
+
+### 3.9 Test CTR-01: Cố tình sửa hợp đồng khi đã ở PendingApproval (Kỳ vọng: 409 Conflict)
+PUT {{HostAddress}}/api/contracts/1
+Content-Type: application/json
+
+{
+  "contractNo": "HD-2026-018-MODIFIED"
+}
+
+### 3.10 Kiểm tra lại hợp đồng sau toàn bộ quy trình
+GET {{HostAddress}}/api/contracts/1
+Accept: application/json

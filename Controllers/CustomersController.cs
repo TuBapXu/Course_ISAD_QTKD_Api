@@ -1,26 +1,47 @@
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using QTKD.Api.DTOs;
 using QTKD.Api.Services;
 
 namespace QTKD.Api.Controllers
 {
-    // Đường dẫn gốc: api/customers
     [Route("api/[controller]")]
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        private readonly QtkdQueryService _queryService;
-        public CustomersController(QtkdQueryService queryService)
+        private readonly ICustomerService _customerService;
+
+        public CustomersController(ICustomerService customerService)
         {
-            _queryService = queryService;
+            _customerService = customerService;
         }
 
-        // Endpoint GET /api/customers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            // Gọi hàm từ Service và trả về mã 200 OK kèm danh sách
-            var customers = await _queryService.GetAllCustomersAsync();
+            var customers = await _customerService.GetAllAsync();
             return Ok(customers);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var customer = await _customerService.GetByIdAsync(id);
+            return Ok(customer);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CreateCustomerDto dto)
+        {
+            var created = await _customerService.CreateAsync(dto);
+            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromBody] UpdateCustomerDto dto)
+        {
+            var updated = await _customerService.UpdateAsync(id, dto);
+            return Ok(updated);
         }
     }
 }

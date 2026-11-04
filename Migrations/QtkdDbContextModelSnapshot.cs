@@ -30,8 +30,14 @@ namespace QTKD.Api.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("ContractContent")
+                        .HasColumnType("text");
+
                     b.Property<string>("ContractNo")
                         .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("CurrentApprovalId")
                         .HasColumnType("text");
 
                     b.Property<int>("CustomerId")
@@ -40,12 +46,19 @@ namespace QTKD.Api.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("timestamp without time zone");
 
+                    b.Property<string>("FileUrl")
+                        .HasColumnType("text");
+
+                    b.Property<string>("LastIdempotencyKey")
+                        .HasColumnType("text");
+
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.HasKey("Id");
 

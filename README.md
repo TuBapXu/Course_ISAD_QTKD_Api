@@ -201,18 +201,27 @@ All unhandled exceptions are processed by `GlobalExceptionMiddleware` and return
 
 | Status Code | Meaning | Typical Cause |
 |---|---|---|
-| `400 Bad Request` | Invalid input or violated business rule | Validation failure in the service layer |
+| `400 Bad Request` | Invalid input or violated business rule | CTR-02 missing fields/files, validation failure |
+| `403 Forbidden` | Access denied | User lacks required Sales role (AC01) |
 | `404 Not Found` | Resource does not exist | Requested ID not found |
-| `500 Internal Server Error` | Unexpected failure | Unhandled exception |
+| `409 Conflict` | Business state conflict | CTR-01 editing non-draft contract, AC02 re-submitting |
+| `500 Internal Server Error` | Unexpected failure | Unhandled server exception |
+
+---
+
+## Week 06 Deliverables & Documentation
+
+Detailed documentation and traceability matrix for Week 06 (US03 / CTR-01, 02, 03 and AC01–AC05):
+- See [Tuan_06_Bao_Cao.md](docs/Tuan_06_Bao_Cao.md) for the complete API specifications, business rule mapping, and demo guidelines.
+- See [QTKD.Api.http](QTKD.Api.http) for runnable HTTP requests covering all 11 test scenarios.
 
 ---
 
 ## Roadmap
 
-- [ ] Add unit tests for the service layer
-- [ ] Add authentication & authorization
-- [ ] Add pagination, filtering, and sorting for list endpoints
-- [ ] Containerize with Docker
+- [x] Week 05: Solution setup, PostgreSQL connection, initial entities, seed data, and query API
+- [x] Week 06: Business rules implementation (US03 Submit Contract, CTR-01, CTR-02, CTR-03, AC01–AC05, Customer CRUD, Pricing management)
+- [ ] Week 07: Automated unit testing & integration testing with xUnit
 
 ---
 
