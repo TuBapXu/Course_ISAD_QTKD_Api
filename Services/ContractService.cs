@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using QTKD.Api.DTOs;
 using QTKD.Api.Entities;
@@ -11,6 +13,9 @@ namespace QTKD.Api.Services
     public class ContractService : IContractService
     {
         private readonly IQtkdRepository _repository;
+
+        // Khóa theo từng ContractId để chống tranh chấp đồng thời (AC05 / TC06 Slide 20)
+        private static readonly ConcurrentDictionary<int, SemaphoreSlim> _submitLocks = new();
 
         public ContractService(IQtkdRepository repository)
         {
@@ -88,6 +93,26 @@ namespace QTKD.Api.Services
                 throw new StateConflictException($"Vi phạm CTR-01: Không thể sửa hợp đồng ở trạng thái '{contract.Status}'. Chỉ được sửa khi ở trạng thái Draft hoặc RevisionRequested.");
             }
 
+            // CTR-03: Không được chuyển thẳng Draft sang Approved (hoặc đổi trạng thái tùy ý qua cập nhật)
+            if (dto.Status.HasValue && dto.Status.Value != contract.Status)
+            {
+                if (contract.Status == ContractStatus.Draft && dto.Status.Value == ContractStatus.Approved)
+                {
+                    throw new StateConflictException("Vi phạm CTR-03: Không được chuyển hợp đồng từ Draft thẳng sang Approved. Phải gửi trình duyệt (PendingApproval).");
+                }
+
+                throw new StateConflictException($"Vi phạm CTR-03: Không được phép thay đổi trực tiếp trạng thái hợp đồng từ '{contract.Status}' sang '{dto.Status.Value}'.");
+            }
+
+            if (dto.ContractNo != null)
+            {
+                if (string.IsNullOrWhiteSpace(dto.ContractNo))
+                {
+                    throw new BusinessRuleException("Số hợp đồng không được để trống.");
+                }
+                contract.ContractNo = dto.ContractNo.Trim();
+            }
+
             if (dto.CustomerId.HasValue)
             {
                 var customer = await _repository.GetCustomerByIdAsync(dto.CustomerId.Value);
@@ -96,11 +121,6 @@ namespace QTKD.Api.Services
                     throw new BusinessRuleException("Khách hàng được cập nhật không tồn tại hoặc không ở trạng thái Active.");
                 }
                 contract.CustomerId = dto.CustomerId.Value;
-            }
-
-            if (!string.IsNullOrWhiteSpace(dto.ContractNo))
-            {
-                contract.ContractNo = dto.ContractNo.Trim();
             }
 
             if (dto.StartDate.HasValue)
@@ -140,83 +160,92 @@ namespace QTKD.Api.Services
                 throw new ForbiddenException("Vi phạm AC01: Người dùng không có quyền gửi hợp đồng trình duyệt. Yêu cầu quyền Nhân viên Kinh doanh (Sales).");
             }
 
-            // Tìm hợp đồng (nếu không có -> 404 Not Found)
-            var contract = await _repository.GetContractByIdAsync(id);
-            if (contract == null)
+            var semaphore = _submitLocks.GetOrAdd(id, _ => new SemaphoreSlim(1, 1));
+            await semaphore.WaitAsync();
+            try
             {
-                throw new KeyNotFoundException($"Không tìm thấy hợp đồng có ID = {id}");
-            }
-
-            // 2. KIỂM TRA GỬI LẶP & IDEMPOTENCY (AC05, TC05, TC06)
-            if (contract.Status == ContractStatus.PendingApproval)
-            {
-                // Nếu cùng Idempotency-Key -> Trả về kết quả phiên cũ (không tạo workflow thứ 2)
-                if (!string.IsNullOrWhiteSpace(idempotencyKey) && idempotencyKey == contract.LastIdempotencyKey)
+                // Tìm hợp đồng (nếu không có -> 404 Not Found)
+                var contract = await _repository.GetContractByIdAsync(id);
+                if (contract == null)
                 {
-                    return new SubmitContractResponseDto
-                    {
-                        ContractId = contract.Id,
-                        Status = contract.Status.ToString(),
-                        ApprovalId = contract.CurrentApprovalId ?? $"APP-{contract.Id}"
-                    };
+                    throw new KeyNotFoundException($"Không tìm thấy hợp đồng có ID = {id}");
                 }
 
-                // Nếu gửi lại mà không có key hoặc gửi bình thường khi đang PendingApproval -> Báo sai trạng thái (AC02, TC02 -> 409 Conflict)
-                throw new StateConflictException("Vi phạm AC02: Hợp đồng đã ở trạng thái Chờ phê duyệt (PendingApproval), không thể gửi lại.");
+                // 2. KIỂM TRA GỬI LẶP & IDEMPOTENCY (AC05, TC05, TC06)
+                if (contract.Status == ContractStatus.PendingApproval)
+                {
+                    // Nếu cùng Idempotency-Key -> Trả về kết quả phiên cũ (không tạo workflow thứ 2)
+                    if (!string.IsNullOrWhiteSpace(idempotencyKey) && idempotencyKey == contract.LastIdempotencyKey)
+                    {
+                        return new SubmitContractResponseDto
+                        {
+                            ContractId = contract.Id,
+                            Status = contract.Status.ToString(),
+                            ApprovalId = contract.CurrentApprovalId ?? $"APP-{contract.Id}"
+                        };
+                    }
+
+                    // Nếu gửi lại mà không có key hoặc gửi bình thường khi đang PendingApproval -> Báo sai trạng thái (AC02, TC02 -> 409 Conflict)
+                    throw new StateConflictException("Vi phạm AC02: Hợp đồng đã ở trạng thái Chờ phê duyệt (PendingApproval), không thể gửi lại.");
+                }
+
+                // 3. KIỂM TRA TRẠNG THÁI CHO PHÉP GỬI (AC02 -> 409 Conflict)
+                if (contract.Status != ContractStatus.Draft && contract.Status != ContractStatus.RevisionRequested)
+                {
+                    throw new StateConflictException($"Vi phạm AC02: Hợp đồng sai trạng thái ({contract.Status}). Chỉ được gửi trình duyệt khi ở trạng thái Draft hoặc RevisionRequested.");
+                }
+
+                // 4. KIỂM TRA ĐIỀU KIỆN CTR-02 (AC03 -> 400 Bad Request kèm mảng lỗi)
+                var errors = new List<string>();
+
+                if (contract.Customer == null || !contract.Customer.Status.Equals("Active", StringComparison.OrdinalIgnoreCase))
+                {
+                    errors.Add("Khách hàng không tồn tại hoặc không ở trạng thái hoạt động (Active).");
+                }
+
+                if (contract.StartDate >= contract.EndDate)
+                {
+                    errors.Add("Thời gian hiệu lực không hợp lệ (Ngày kết thúc phải sau ngày bắt đầu).");
+                }
+
+                if (string.IsNullOrWhiteSpace(contract.FileUrl))
+                {
+                    errors.Add("Thiếu tệp đính kèm bắt buộc (FileUrl không được để trống).");
+                }
+
+                if (string.IsNullOrWhiteSpace(contract.ContractContent) ||
+                    (!contract.ContractContent.Contains("Cộng hòa xã hội chủ nghĩa Việt Nam", StringComparison.OrdinalIgnoreCase) &&
+                     !contract.ContractContent.Contains("Cong hoa xa hoi chu nghia Viet Nam", StringComparison.OrdinalIgnoreCase)))
+                {
+                    errors.Add("Nội dung hợp đồng bắt buộc chưa đầy đủ (phải có Quốc hiệu 'Cộng hòa xã hội chủ nghĩa Việt Nam').");
+                }
+
+                if (errors.Count > 0)
+                {
+                    // AC03: Không đạt CTR-02 -> Không thay đổi dữ liệu, trả danh sách điều kiện chưa đạt
+                    throw new BusinessRuleException(errors);
+                }
+
+                // 5. CTR-03 & AC04: Chuyển sang PendingApproval (tuyệt đối không chuyển sang Approved) & tạo Approval Instance
+                var approvalId = $"APP-{contract.Id}-{DateTime.UtcNow:yyyyMMddHHmmssfff}";
+
+                contract.Status = ContractStatus.PendingApproval;
+                contract.CurrentApprovalId = approvalId;
+                contract.LastIdempotencyKey = idempotencyKey;
+
+                await _repository.UpdateContractAsync(contract);
+
+                return new SubmitContractResponseDto
+                {
+                    ContractId = contract.Id,
+                    Status = contract.Status.ToString(),
+                    ApprovalId = approvalId
+                };
             }
-
-            // 3. KIỂM TRA TRẠNG THÁI CHO PHÉP GỬI (AC02 -> 409 Conflict)
-            if (contract.Status != ContractStatus.Draft && contract.Status != ContractStatus.RevisionRequested)
+            finally
             {
-                throw new StateConflictException($"Vi phạm AC02: Hợp đồng sai trạng thái ({contract.Status}). Chỉ được gửi trình duyệt khi ở trạng thái Draft hoặc RevisionRequested.");
+                semaphore.Release();
             }
-
-            // 4. KIỂM TRA ĐIỀU KIỆN CTR-02 (AC03 -> 400 Bad Request kèm mảng lỗi)
-            var errors = new List<string>();
-
-            if (contract.Customer == null || !contract.Customer.Status.Equals("Active", StringComparison.OrdinalIgnoreCase))
-            {
-                errors.Add("Khách hàng không tồn tại hoặc không ở trạng thái hoạt động (Active).");
-            }
-
-            if (contract.StartDate >= contract.EndDate)
-            {
-                errors.Add("Thời gian hiệu lực không hợp lệ (Ngày kết thúc phải sau ngày bắt đầu).");
-            }
-
-            if (string.IsNullOrWhiteSpace(contract.FileUrl))
-            {
-                errors.Add("Thiếu tệp đính kèm bắt buộc (FileUrl không được để trống).");
-            }
-
-            if (string.IsNullOrWhiteSpace(contract.ContractContent) ||
-                (!contract.ContractContent.Contains("Cộng hòa xã hội chủ nghĩa Việt Nam", StringComparison.OrdinalIgnoreCase) &&
-                 !contract.ContractContent.Contains("Cong hoa xa hoi chu nghia Viet Nam", StringComparison.OrdinalIgnoreCase)))
-            {
-                errors.Add("Nội dung hợp đồng bắt buộc chưa đầy đủ (phải có Quốc hiệu 'Cộng hòa xã hội chủ nghĩa Việt Nam').");
-            }
-
-            if (errors.Count > 0)
-            {
-                // AC03: Không đạt CTR-02 -> Không thay đổi dữ liệu, trả danh sách điều kiện chưa đạt
-                throw new BusinessRuleException(errors);
-            }
-
-            // 5. CTR-03 & AC04: Chuyển sang PendingApproval (tuyệt đối không chuyển sang Approved) & tạo Approval Instance
-            var approvalId = $"APP-{contract.Id}-{DateTime.UtcNow:yyyyMMddHHmmss}";
-
-            contract.Status = ContractStatus.PendingApproval;
-            contract.CurrentApprovalId = approvalId;
-            contract.LastIdempotencyKey = idempotencyKey;
-
-            await _repository.UpdateContractAsync(contract);
-
-            return new SubmitContractResponseDto
-            {
-                ContractId = contract.Id,
-                Status = contract.Status.ToString(),
-                ApprovalId = approvalId
-            };
         }
     }
 }

@@ -54,3 +54,6 @@ app.MapControllers();
 
 // 6. Khởi động ứng dụng
 app.Run();
+
+// Cho phép project QTKD.Tests khởi tạo WebApplicationFactory<Program>
+public partial class Program { }

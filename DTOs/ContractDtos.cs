@@ -22,6 +22,7 @@ namespace QTKD.Api.DTOs
         public DateTime? EndDate { get; set; }
         public string? FileUrl { get; set; }
         public string? ContractContent { get; set; }
+        public ContractStatus? Status { get; set; }
     }
 
     public class SubmitContractRequestDto
