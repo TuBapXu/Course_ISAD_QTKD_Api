@@ -1,0 +1,738 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="3d8f310d-83cd-4492-af41-ff8af53a4ebd" name="HP@LAPTOP-QE3DLQHT 2026-11-11 20:59:51" runUser="LAPTOP-QE3DLQHT\HP" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-11T20:59:51.7689683+07:00" queuing="2026-11-11T20:59:51.7689691+07:00" start="2026-11-11T20:59:50.1596785+07:00" finish="2026-11-11T20:59:57.4253774+07:00" />
+  <TestSettings name="default" id="0ab85ac6-40de-4e76-b7e5-7fcb75e428ed">
+    <Deployment runDeploymentRoot="HP_LAPTOP-QE3DLQHT_2026-11-11_20_59_51" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="0046baa8-cb0b-420b-9ffa-ede4d04b7be8" testId="ddc345e5-47ab-4b0e-a316-a3527f740fe9" testName="Unit - Pricing (Sai) - Thêm PriceItem vào PriceList không tồn tại ném KeyNotFoundException" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.1564622" startTime="2026-11-11T20:59:51.4342279+07:00" endTime="2026-11-11T20:59:51.6236294+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0046baa8-cb0b-420b-9ffa-ede4d04b7be8" />
+    <UnitTestResult executionId="54ad0820-f237-4c7a-b9bc-c6a3c752b611" testId="45c6aedc-2723-4b89-400d-cf3479d48909" testName="TC05 - Submit Contract thiếu điều kiện CTR-02 bị từ chối 400 và vẫn là Draft" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0189270" startTime="2026-11-11T20:59:57.2495894+07:00" endTime="2026-11-11T20:59:57.2689443+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="54ad0820-f237-4c7a-b9bc-c6a3c752b611" />
+    <UnitTestResult executionId="631dc82f-86a1-4ddd-963d-dc5314fcc90a" testId="22a8390b-eeca-0157-7000-4711a87e1e4b" testName="Unit - CTR03 (Sai) - Từ chối chuyển trực tiếp từ Draft sang Approved qua UpdateAsync" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0085013" startTime="2026-11-11T20:59:51.6998808+07:00" endTime="2026-11-11T20:59:51.7019035+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="631dc82f-86a1-4ddd-963d-dc5314fcc90a" />
+    <UnitTestResult executionId="fad03740-ed96-46b6-9916-c48d0e8a216b" testId="c3c05b61-7e45-60e7-cb15-735bcca3d4c9" testName="TC06 - Submit Contract hợp lệ chuyển sang PendingApproval và tạo ApprovalId (CTR-03 &amp; AC04)" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0205632" startTime="2026-11-11T20:59:57.2018366+07:00" endTime="2026-11-11T20:59:57.2225094+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fad03740-ed96-46b6-9916-c48d0e8a216b" />
+    <UnitTestResult executionId="8666b295-ba7f-41bf-a023-32777f026589" testId="d9e60178-d055-f5cb-01bf-5632032df038" testName="Unit - Customer (Sai) - Cập nhật Customer không tồn tại ném KeyNotFoundException" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.1565839" startTime="2026-11-11T20:59:51.4298136+07:00" endTime="2026-11-11T20:59:51.6219758+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8666b295-ba7f-41bf-a023-32777f026589" />
+    <UnitTestResult executionId="ccf7a73c-33d9-4fe0-8e96-7a5043f00a46" testId="e1143fca-6723-bfdd-0285-a336d09bdd96" testName="Unit - CTR01 (Đúng) - Cho phép sửa hợp đồng khi ở Draft hoặc RevisionRequested(allowedStatus: Draft)" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0089779" startTime="2026-11-11T20:59:51.7022753+07:00" endTime="2026-11-11T20:59:51.7044785+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ccf7a73c-33d9-4fe0-8e96-7a5043f00a46" />
+    <UnitTestResult executionId="0182f4b6-0e9a-44b5-a140-ad5060f807a3" testId="c23d2541-a87d-f063-7152-0dac7be9e767" testName="TC08 - Submit lặp cùng Idempotency-Key hoặc sai trạng thái không tạo trùng phiên duyệt (AC05)" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0287518" startTime="2026-11-11T20:59:57.1722459+07:00" endTime="2026-11-11T20:59:57.2012846+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0182f4b6-0e9a-44b5-a140-ad5060f807a3" />
+    <UnitTestResult executionId="24ce4280-cef3-478c-a416-7bb4363a6933" testId="31514b96-7399-b719-57fc-95e9d0d07ee3" testName="Unit - CTR01 (Sai) - Từ chối sửa khi hợp đồng ở PendingApproval hoặc Approved(blockedStatus: Approved)" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0289238" startTime="2026-11-11T20:59:51.6217602+07:00" endTime="2026-11-11T20:59:51.6281549+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24ce4280-cef3-478c-a416-7bb4363a6933" />
+    <UnitTestResult executionId="b86900fd-de18-4975-af17-e42eaf22605c" testId="88f07801-749c-e257-c418-21f0c400ef62" testName="TC01 - Tạo Customer hợp lệ phải trả về 201 và lưu vào DB" computerName="LAPTOP-QE3DLQHT" duration="00:00:04.8489489" startTime="2026-11-11T20:59:51.4339617+07:00" endTime="2026-11-11T20:59:56.2879807+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b86900fd-de18-4975-af17-e42eaf22605c" />
+    <UnitTestResult executionId="0c33466f-5236-4cd4-ae2d-5caabdc63dcf" testId="dda6f792-cb15-0cb2-4d8d-fbd547184ba2" testName="AC01 (Slide 20 TC01) - Người không có quyền Sales gửi trình duyệt bị từ chối 403" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0163414" startTime="2026-11-11T20:59:56.8882249+07:00" endTime="2026-11-11T20:59:56.9048831+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c33466f-5236-4cd4-ae2d-5caabdc63dcf" />
+    <UnitTestResult executionId="3ad6e49c-a21a-44fe-a4ca-fa6eefbb5055" testId="b10d1d76-043d-aa02-decf-5ad85579b212" testName="Unit - Pricing (Đúng) - Thêm PriceItem hợp lệ với UnitPrice &gt; 0" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0232801" startTime="2026-11-11T20:59:51.6255640+07:00" endTime="2026-11-11T20:59:51.7040128+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ad6e49c-a21a-44fe-a4ca-fa6eefbb5055" />
+    <UnitTestResult executionId="a6fddff5-e0dd-4c4f-883b-660601b0f908" testId="b9757d3f-34ef-7a94-ba51-4f7f718afa25" testName="TC08b (Slide 20 TC06) - Hai yêu cầu Submit gửi đồng thời không tạo hai workflow" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0272791" startTime="2026-11-11T20:59:56.8385294+07:00" endTime="2026-11-11T20:59:56.8661001+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a6fddff5-e0dd-4c4f-883b-660601b0f908" />
+    <UnitTestResult executionId="5994a541-519e-4720-95df-f02d3024786d" testId="77feea46-df7a-29b1-0928-d5d3900f35dc" testName="TC04 - Sửa Contract ở PendingApproval bị từ chối 409 và dữ liệu giữ nguyên (CTR-01)" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0260548" startTime="2026-11-11T20:59:57.1451337+07:00" endTime="2026-11-11T20:59:57.1716266+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5994a541-519e-4720-95df-f02d3024786d" />
+    <UnitTestResult executionId="b8211cf0-274c-48eb-8370-0efc447620f1" testId="daf7be23-75ad-48c4-aaab-8dd525d3ef7c" testName="Unit - Customer (Đúng) - Tạo Customer hợp lệ gọi AddCustomerAsync" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0076789" startTime="2026-11-11T20:59:51.6984407+07:00" endTime="2026-11-11T20:59:51.6999503+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b8211cf0-274c-48eb-8370-0efc447620f1" />
+    <UnitTestResult executionId="cc344d0b-7aac-4b49-a27a-efad350cbc25" testId="86d25eb1-459c-4ba5-4f2c-a18933945664" testName="Pricing API - Tạo PriceList và kiểm tra đơn giá PriceItem hợp lệ / âm" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.2390243" startTime="2026-11-11T20:59:56.9051872+07:00" endTime="2026-11-11T20:59:57.1446793+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cc344d0b-7aac-4b49-a27a-efad350cbc25" />
+    <UnitTestResult executionId="3e9b7f5d-3858-4ec6-badf-a5626a44b462" testId="39caabf9-a54e-7b71-48d1-645b16cc37ac" testName="Unit - CTR01 (Đúng) - Cho phép sửa hợp đồng khi ở Draft hoặc RevisionRequested(allowedStatus: RevisionRequested)" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0013266" startTime="2026-11-11T20:59:51.7048741+07:00" endTime="2026-11-11T20:59:51.7050353+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3e9b7f5d-3858-4ec6-badf-a5626a44b462" />
+    <UnitTestResult executionId="cbfa4f37-757e-4d9f-acdf-0d490068bc53" testId="bd5785d3-1ccc-3d16-62fd-a2aeabe021b2" testName="Unit - CTR02 (Sai) - Từ chối Submit khi thiếu FileUrl và thiếu Quốc hiệu" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0069081" startTime="2026-11-11T20:59:51.7057307+07:00" endTime="2026-11-11T20:59:51.7058181+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cbfa4f37-757e-4d9f-acdf-0d490068bc53" />
+    <UnitTestResult executionId="d857f848-ac46-4463-b6ed-8835e9274c86" testId="bd620e53-badd-7c7f-0d23-4bc37a7ed142" testName="Unit - AC05 - Gửi lặp với cùng Idempotency-Key trả về ApprovalId cũ và không cập nhật lại DB" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0022434" startTime="2026-11-11T20:59:51.7099381+07:00" endTime="2026-11-11T20:59:51.7099883+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d857f848-ac46-4463-b6ed-8835e9274c86" />
+    <UnitTestResult executionId="f7ce9b42-bc37-4497-bbbf-ad8686705c77" testId="47dc2b31-732e-0cb1-4626-3125c24b0c53" testName="Unit - Pricing (Sai) - Từ chối PriceItem khi UnitPrice &lt;= 0(badPrice: 0)" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0010721" startTime="2026-11-11T20:59:51.6249213+07:00" endTime="2026-11-11T20:59:51.6250817+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f7ce9b42-bc37-4497-bbbf-ad8686705c77" />
+    <UnitTestResult executionId="82f6d68b-8bca-40ad-937f-027956736659" testId="de803369-06ae-051b-ae38-52b02c87494e" testName="Unit - CTR01 (Sai) - Từ chối sửa khi hợp đồng ở PendingApproval hoặc Approved(blockedStatus: Rejected)" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0016014" startTime="2026-11-11T20:59:51.6985096+07:00" endTime="2026-11-11T20:59:51.6986285+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="82f6d68b-8bca-40ad-937f-027956736659" />
+    <UnitTestResult executionId="c654bf6d-7b61-4612-97f8-2ee98dd1b2e3" testId="0c003c48-5967-b97b-a4af-ef9fa1b67dfa" testName="Unit - CTR01 (Sai) - Từ chối sửa khi hợp đồng ở PendingApproval hoặc Approved(blockedStatus: PendingApproval)" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0007837" startTime="2026-11-11T20:59:51.6995249+07:00" endTime="2026-11-11T20:59:51.6996288+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c654bf6d-7b61-4612-97f8-2ee98dd1b2e3" />
+    <UnitTestResult executionId="41599b7d-1b43-4105-bad2-fbd4b0e9fcad" testId="d9120ddd-ea0f-e6a2-9e3e-5d3b1598c5d9" testName="Unit - CTR02 (Đúng) - Submit thành công khi đáp ứng đủ toàn bộ điều kiện" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0038878" startTime="2026-11-11T20:59:51.7097588+07:00" endTime="2026-11-11T20:59:51.7098083+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="41599b7d-1b43-4105-bad2-fbd4b0e9fcad" />
+    <UnitTestResult executionId="90edcd05-79d1-4abd-916f-44f242b508ed" testId="ca169ff2-5fa9-a00e-a0eb-489f3191f805" testName="TC03 - Sửa Contract ở Draft thành công khi dữ liệu hợp lệ" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0260118" startTime="2026-11-11T20:59:57.2243667+07:00" endTime="2026-11-11T20:59:57.2492727+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="90edcd05-79d1-4abd-916f-44f242b508ed" />
+    <UnitTestResult executionId="c60f2f57-8054-47bf-aa0f-54e91a6a4b36" testId="db70474c-7e3e-1798-6b96-106251baeccb" testName="Unit - AC01 - Người dùng không có quyền Sales gửi trình duyệt ném ForbiddenException" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.1449736" startTime="2026-11-11T20:59:51.4341365+07:00" endTime="2026-11-11T20:59:51.5911437+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c60f2f57-8054-47bf-aa0f-54e91a6a4b36" />
+    <UnitTestResult executionId="d7547476-98d9-4594-9e69-bff306766a53" testId="cb9f71d5-5b2f-02b3-436a-813f1c7457f7" testName="TC02 - Tạo Customer thiếu thông tin bắt buộc bị từ chối 400 và có thông báo lỗi" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0924225" startTime="2026-11-11T20:59:56.2912048+07:00" endTime="2026-11-11T20:59:56.3837525+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7547476-98d9-4594-9e69-bff306766a53" />
+    <UnitTestResult executionId="3e93f383-0b7b-48bd-859a-235a95156804" testId="ba8d1c1d-f7b6-8d13-7d25-3d50fdd3258e" testName="Unit - CTR03 (Đúng) - Submit thành công chỉ chuyển từ Draft sang PendingApproval, không thành Approved" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0094840" startTime="2026-11-11T20:59:51.7053860+07:00" endTime="2026-11-11T20:59:51.7054776+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3e93f383-0b7b-48bd-859a-235a95156804" />
+    <UnitTestResult executionId="93d9240e-1958-4ac1-b398-1c02ce06138c" testId="75448582-46b9-2956-e4b0-536dd7800f32" testName="Unit - Pricing (Sai) - Từ chối PriceItem khi UnitPrice &lt;= 0(badPrice: -50000)" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0136619" startTime="2026-11-11T20:59:51.6244251+07:00" endTime="2026-11-11T20:59:51.6246684+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="93d9240e-1958-4ac1-b398-1c02ce06138c" />
+    <UnitTestResult executionId="5681d47c-fa0d-4036-8945-9010a837dfa8" testId="44436cae-869e-1e34-d708-f5b4611c41ec" testName="TC07 - Thử chuyển Draft thẳng sang Approved bị từ chối 409 (CTR-03)" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0209510" startTime="2026-11-11T20:59:56.8664601+07:00" endTime="2026-11-11T20:59:56.8878648+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5681d47c-fa0d-4036-8945-9010a837dfa8" />
+    <UnitTestResult executionId="4618fcc8-43d8-49b3-991a-d18a02495727" testId="324c06cb-75b7-ce20-2b2c-ecc6b432c7ea" testName="Unit - CTR02 (Sai) - Từ chối Submit khi Customer không Active và ngày hiệu lực sai" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0028675" startTime="2026-11-11T20:59:51.7094400+07:00" endTime="2026-11-11T20:59:51.7095234+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4618fcc8-43d8-49b3-991a-d18a02495727" />
+    <UnitTestResult executionId="5fa1cf34-8377-464f-b307-023f0126d91b" testId="e56deaa5-1ec6-01aa-3257-f22503f5b175" testName="Week06 Demo E2E - Toàn bộ luồng Tạo Customer -&gt; Draft -&gt; Submit lỗi -&gt; Sửa -&gt; Submit thành công" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.4510920" startTime="2026-11-11T20:59:56.3860962+07:00" endTime="2026-11-11T20:59:56.8380002+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5fa1cf34-8377-464f-b307-023f0126d91b" />
+    <UnitTestResult executionId="3292ad3e-5188-4f55-9e9a-f302c19b7814" testId="56e99657-8178-371d-b621-7829dfc0c18c" testName="Unit - Customer (Sai) - Tạo Customer thiếu tên ném BusinessRuleException" computerName="LAPTOP-QE3DLQHT" duration="00:00:00.0247292" startTime="2026-11-11T20:59:51.6244782+07:00" endTime="2026-11-11T20:59:51.6280066+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3292ad3e-5188-4f55-9e9a-f302c19b7814" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="AC01 (Slide 20 TC01) - Người không có quyền Sales gửi trình duyệt bị từ chối 403" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="dda6f792-cb15-0cb2-4d8d-fbd547184ba2">
+      <Execution id="0c33466f-5236-4cd4-ae2d-5caabdc63dcf" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.IntegrationTests.ContractIntegrationTests" name="AC01_SubmitContract_WithoutSalesRole_ShouldReturn403_AndKeepDraft" />
+    </UnitTest>
+    <UnitTest name="TC04 - Sửa Contract ở PendingApproval bị từ chối 409 và dữ liệu giữ nguyên (CTR-01)" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="77feea46-df7a-29b1-0928-d5d3900f35dc">
+      <Execution id="5994a541-519e-4720-95df-f02d3024786d" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.IntegrationTests.ContractIntegrationTests" name="TC04_UpdateContract_WhenPendingApproval_ShouldReturn409_AndKeepOriginalData" />
+    </UnitTest>
+    <UnitTest name="TC01 - Tạo Customer hợp lệ phải trả về 201 và lưu vào DB" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="88f07801-749c-e257-c418-21f0c400ef62">
+      <Execution id="b86900fd-de18-4975-af17-e42eaf22605c" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.IntegrationTests.CustomerIntegrationTests" name="TC01_CreateValidCustomer_ShouldSucceed_AndReadBackFromDb" />
+    </UnitTest>
+    <UnitTest name="Pricing API - Tạo PriceList và kiểm tra đơn giá PriceItem hợp lệ / âm" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="86d25eb1-459c-4ba5-4f2c-a18933945664">
+      <Execution id="cc344d0b-7aac-4b49-a27a-efad350cbc25" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.IntegrationTests.ContractIntegrationTests" name="PricingApi_CreatePriceListAndItems_ShouldValidateUnitPrice" />
+    </UnitTest>
+    <UnitTest name="Unit - CTR01 (Đúng) - Cho phép sửa hợp đồng khi ở Draft hoặc RevisionRequested(allowedStatus: Draft)" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="e1143fca-6723-bfdd-0285-a336d09bdd96">
+      <Execution id="ccf7a73c-33d9-4fe0-8e96-7a5043f00a46" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.ContractServiceRuleTests" name="CTR01_UpdateAsync_WhenStatusAllowed_ShouldSucceed" />
+    </UnitTest>
+    <UnitTest name="Unit - Pricing (Sai) - Từ chối PriceItem khi UnitPrice &lt;= 0(badPrice: -50000)" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="75448582-46b9-2956-e4b0-536dd7800f32">
+      <Execution id="93d9240e-1958-4ac1-b398-1c02ce06138c" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.PricingServiceTests" name="AddPriceItemAsync_WhenUnitPriceInvalid_ShouldThrowBusinessRuleException" />
+    </UnitTest>
+    <UnitTest name="Unit - CTR01 (Sai) - Từ chối sửa khi hợp đồng ở PendingApproval hoặc Approved(blockedStatus: PendingApproval)" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="0c003c48-5967-b97b-a4af-ef9fa1b67dfa">
+      <Execution id="c654bf6d-7b61-4612-97f8-2ee98dd1b2e3" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.ContractServiceRuleTests" name="CTR01_UpdateAsync_WhenStatusDisallowed_ShouldThrowStateConflictException" />
+    </UnitTest>
+    <UnitTest name="Unit - CTR02 (Đúng) - Submit thành công khi đáp ứng đủ toàn bộ điều kiện" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="d9120ddd-ea0f-e6a2-9e3e-5d3b1598c5d9">
+      <Execution id="41599b7d-1b43-4105-bad2-fbd4b0e9fcad" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.ContractServiceRuleTests" name="CTR02_SubmitContractAsync_WhenAllConditionsValid_ShouldSucceed" />
+    </UnitTest>
+    <UnitTest name="TC07 - Thử chuyển Draft thẳng sang Approved bị từ chối 409 (CTR-03)" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="44436cae-869e-1e34-d708-f5b4611c41ec">
+      <Execution id="5681d47c-fa0d-4036-8945-9010a837dfa8" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.IntegrationTests.ContractIntegrationTests" name="TC07_TransitionDraftDirectlyToApproved_ShouldBeRejected_AndRemainDraft" />
+    </UnitTest>
+    <UnitTest name="TC08b (Slide 20 TC06) - Hai yêu cầu Submit gửi đồng thời không tạo hai workflow" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="b9757d3f-34ef-7a94-ba51-4f7f718afa25">
+      <Execution id="a6fddff5-e0dd-4c4f-883b-660601b0f908" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.IntegrationTests.ContractIntegrationTests" name="TC08b_ConcurrentSubmit_ShouldOnlyCreateSingleApprovalInstance" />
+    </UnitTest>
+    <UnitTest name="TC02 - Tạo Customer thiếu thông tin bắt buộc bị từ chối 400 và có thông báo lỗi" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="cb9f71d5-5b2f-02b3-436a-813f1c7457f7">
+      <Execution id="d7547476-98d9-4594-9e69-bff306766a53" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.IntegrationTests.CustomerIntegrationTests" name="TC02_CreateCustomer_WhenNameIsEmpty_ShouldReturn400WithErrorMessage_AndNotSaveToDb" />
+    </UnitTest>
+    <UnitTest name="Unit - CTR01 (Sai) - Từ chối sửa khi hợp đồng ở PendingApproval hoặc Approved(blockedStatus: Rejected)" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="de803369-06ae-051b-ae38-52b02c87494e">
+      <Execution id="82f6d68b-8bca-40ad-937f-027956736659" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.ContractServiceRuleTests" name="CTR01_UpdateAsync_WhenStatusDisallowed_ShouldThrowStateConflictException" />
+    </UnitTest>
+    <UnitTest name="Unit - AC05 - Gửi lặp với cùng Idempotency-Key trả về ApprovalId cũ và không cập nhật lại DB" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="bd620e53-badd-7c7f-0d23-4bc37a7ed142">
+      <Execution id="d857f848-ac46-4463-b6ed-8835e9274c86" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.ContractServiceRuleTests" name="AC05_SubmitContractAsync_WithSameIdempotencyKey_ShouldReturnExistingApprovalWithoutUpdatingDb" />
+    </UnitTest>
+    <UnitTest name="TC06 - Submit Contract hợp lệ chuyển sang PendingApproval và tạo ApprovalId (CTR-03 &amp; AC04)" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="c3c05b61-7e45-60e7-cb15-735bcca3d4c9">
+      <Execution id="fad03740-ed96-46b6-9916-c48d0e8a216b" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.IntegrationTests.ContractIntegrationTests" name="TC06_SubmitContract_WhenValid_ShouldReturn200_AndUpdateDbToPendingApproval" />
+    </UnitTest>
+    <UnitTest name="TC03 - Sửa Contract ở Draft thành công khi dữ liệu hợp lệ" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="ca169ff2-5fa9-a00e-a0eb-489f3191f805">
+      <Execution id="90edcd05-79d1-4abd-916f-44f242b508ed" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.IntegrationTests.ContractIntegrationTests" name="TC03_UpdateContract_WhenDraftAndValid_ShouldReturn200_AndPersistInDb" />
+    </UnitTest>
+    <UnitTest name="Unit - CTR03 (Sai) - Từ chối chuyển trực tiếp từ Draft sang Approved qua UpdateAsync" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="22a8390b-eeca-0157-7000-4711a87e1e4b">
+      <Execution id="631dc82f-86a1-4ddd-963d-dc5314fcc90a" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.ContractServiceRuleTests" name="CTR03_UpdateAsync_WhenTryingToChangeDraftDirectlyToApproved_ShouldThrowStateConflictException" />
+    </UnitTest>
+    <UnitTest name="Unit - CTR03 (Đúng) - Submit thành công chỉ chuyển từ Draft sang PendingApproval, không thành Approved" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="ba8d1c1d-f7b6-8d13-7d25-3d50fdd3258e">
+      <Execution id="3e93f383-0b7b-48bd-859a-235a95156804" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.ContractServiceRuleTests" name="CTR03_SubmitContractAsync_ShouldTransitionOnlyToPendingApproval" />
+    </UnitTest>
+    <UnitTest name="Unit - Customer (Đúng) - Tạo Customer hợp lệ gọi AddCustomerAsync" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="daf7be23-75ad-48c4-aaab-8dd525d3ef7c">
+      <Execution id="b8211cf0-274c-48eb-8370-0efc447620f1" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.CustomerServiceTests" name="CreateAsync_WhenValid_ShouldTrimAndSaveCustomer" />
+    </UnitTest>
+    <UnitTest name="Unit - Pricing (Sai) - Thêm PriceItem vào PriceList không tồn tại ném KeyNotFoundException" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="ddc345e5-47ab-4b0e-a316-a3527f740fe9">
+      <Execution id="0046baa8-cb0b-420b-9ffa-ede4d04b7be8" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.PricingServiceTests" name="AddPriceItemAsync_WhenPriceListNotFound_ShouldThrowKeyNotFoundException" />
+    </UnitTest>
+    <UnitTest name="Unit - Pricing (Sai) - Từ chối PriceItem khi UnitPrice &lt;= 0(badPrice: 0)" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="47dc2b31-732e-0cb1-4626-3125c24b0c53">
+      <Execution id="f7ce9b42-bc37-4497-bbbf-ad8686705c77" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.PricingServiceTests" name="AddPriceItemAsync_WhenUnitPriceInvalid_ShouldThrowBusinessRuleException" />
+    </UnitTest>
+    <UnitTest name="Unit - CTR01 (Đúng) - Cho phép sửa hợp đồng khi ở Draft hoặc RevisionRequested(allowedStatus: RevisionRequested)" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="39caabf9-a54e-7b71-48d1-645b16cc37ac">
+      <Execution id="3e9b7f5d-3858-4ec6-badf-a5626a44b462" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.ContractServiceRuleTests" name="CTR01_UpdateAsync_WhenStatusAllowed_ShouldSucceed" />
+    </UnitTest>
+    <UnitTest name="TC08 - Submit lặp cùng Idempotency-Key hoặc sai trạng thái không tạo trùng phiên duyệt (AC05)" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="c23d2541-a87d-f063-7152-0dac7be9e767">
+      <Execution id="0182f4b6-0e9a-44b5-a140-ad5060f807a3" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.IntegrationTests.ContractIntegrationTests" name="TC08_SubmitContractTwice_ShouldNotCreateDuplicateApproval" />
+    </UnitTest>
+    <UnitTest name="Week06 Demo E2E - Toàn bộ luồng Tạo Customer -&gt; Draft -&gt; Submit lỗi -&gt; Sửa -&gt; Submit thành công" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="e56deaa5-1ec6-01aa-3257-f22503f5b175">
+      <Execution id="5fa1cf34-8377-464f-b307-023f0126d91b" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.IntegrationTests.ContractIntegrationTests" name="Week06DemoFlow_CustomerToSubmit_ShouldPassEndToEnd" />
+    </UnitTest>
+    <UnitTest name="Unit - CTR02 (Sai) - Từ chối Submit khi thiếu FileUrl và thiếu Quốc hiệu" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="bd5785d3-1ccc-3d16-62fd-a2aeabe021b2">
+      <Execution id="cbfa4f37-757e-4d9f-acdf-0d490068bc53" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.ContractServiceRuleTests" name="CTR02_SubmitContractAsync_WhenMissingFileAndContent_ShouldThrowBusinessRuleException" />
+    </UnitTest>
+    <UnitTest name="TC05 - Submit Contract thiếu điều kiện CTR-02 bị từ chối 400 và vẫn là Draft" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="45c6aedc-2723-4b89-400d-cf3479d48909">
+      <Execution id="54ad0820-f237-4c7a-b9bc-c6a3c752b611" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.IntegrationTests.ContractIntegrationTests" name="TC05_SubmitContract_WhenMissingCtr02Conditions_ShouldReturn400WithErrors_AndRemainDraft" />
+    </UnitTest>
+    <UnitTest name="Unit - Customer (Sai) - Tạo Customer thiếu tên ném BusinessRuleException" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="56e99657-8178-371d-b621-7829dfc0c18c">
+      <Execution id="3292ad3e-5188-4f55-9e9a-f302c19b7814" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.CustomerServiceTests" name="CreateAsync_WhenNameEmpty_ShouldThrowBusinessRuleException" />
+    </UnitTest>
+    <UnitTest name="Unit - Customer (Sai) - Cập nhật Customer không tồn tại ném KeyNotFoundException" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="d9e60178-d055-f5cb-01bf-5632032df038">
+      <Execution id="8666b295-ba7f-41bf-a023-32777f026589" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.CustomerServiceTests" name="UpdateAsync_WhenCustomerNotFound_ShouldThrowKeyNotFoundException" />
+    </UnitTest>
+    <UnitTest name="Unit - AC01 - Người dùng không có quyền Sales gửi trình duyệt ném ForbiddenException" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="db70474c-7e3e-1798-6b96-106251baeccb">
+      <Execution id="c60f2f57-8054-47bf-aa0f-54e91a6a4b36" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.ContractServiceRuleTests" name="AC01_SubmitContractAsync_WithoutSalesRole_ShouldThrowForbiddenException" />
+    </UnitTest>
+    <UnitTest name="Unit - CTR02 (Sai) - Từ chối Submit khi Customer không Active và ngày hiệu lực sai" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="324c06cb-75b7-ce20-2b2c-ecc6b432c7ea">
+      <Execution id="4618fcc8-43d8-49b3-991a-d18a02495727" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.ContractServiceRuleTests" name="CTR02_SubmitContractAsync_WhenCustomerInactiveAndInvalidDates_ShouldThrowBusinessRuleException" />
+    </UnitTest>
+    <UnitTest name="Unit - CTR01 (Sai) - Từ chối sửa khi hợp đồng ở PendingApproval hoặc Approved(blockedStatus: Approved)" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="31514b96-7399-b719-57fc-95e9d0d07ee3">
+      <Execution id="24ce4280-cef3-478c-a416-7bb4363a6933" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.ContractServiceRuleTests" name="CTR01_UpdateAsync_WhenStatusDisallowed_ShouldThrowStateConflictException" />
+    </UnitTest>
+    <UnitTest name="Unit - Pricing (Đúng) - Thêm PriceItem hợp lệ với UnitPrice &gt; 0" storage="c:\users\hp\desktop\c++codelearn\hk1-2627\phat_trien_ud_httt_hien_dai\qtkd.api\tests\qtkd.tests\bin\debug\net10.0\qtkd.tests.dll" id="b10d1d76-043d-aa02-decf-5ad85579b212">
+      <Execution id="3ad6e49c-a21a-44fe-a4ca-fa6eefbb5055" />
+      <TestMethod codeBase="C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api\tests\QTKD.Tests\bin\Debug\net10.0\QTKD.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="QTKD.Tests.UnitTests.PricingServiceTests" name="AddPriceItemAsync_WhenValid_ShouldSucceed" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="ddc345e5-47ab-4b0e-a316-a3527f740fe9" executionId="0046baa8-cb0b-420b-9ffa-ede4d04b7be8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45c6aedc-2723-4b89-400d-cf3479d48909" executionId="54ad0820-f237-4c7a-b9bc-c6a3c752b611" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="22a8390b-eeca-0157-7000-4711a87e1e4b" executionId="631dc82f-86a1-4ddd-963d-dc5314fcc90a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3c05b61-7e45-60e7-cb15-735bcca3d4c9" executionId="fad03740-ed96-46b6-9916-c48d0e8a216b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d9e60178-d055-f5cb-01bf-5632032df038" executionId="8666b295-ba7f-41bf-a023-32777f026589" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e1143fca-6723-bfdd-0285-a336d09bdd96" executionId="ccf7a73c-33d9-4fe0-8e96-7a5043f00a46" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c23d2541-a87d-f063-7152-0dac7be9e767" executionId="0182f4b6-0e9a-44b5-a140-ad5060f807a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="31514b96-7399-b719-57fc-95e9d0d07ee3" executionId="24ce4280-cef3-478c-a416-7bb4363a6933" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="88f07801-749c-e257-c418-21f0c400ef62" executionId="b86900fd-de18-4975-af17-e42eaf22605c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dda6f792-cb15-0cb2-4d8d-fbd547184ba2" executionId="0c33466f-5236-4cd4-ae2d-5caabdc63dcf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b10d1d76-043d-aa02-decf-5ad85579b212" executionId="3ad6e49c-a21a-44fe-a4ca-fa6eefbb5055" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b9757d3f-34ef-7a94-ba51-4f7f718afa25" executionId="a6fddff5-e0dd-4c4f-883b-660601b0f908" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="77feea46-df7a-29b1-0928-d5d3900f35dc" executionId="5994a541-519e-4720-95df-f02d3024786d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="daf7be23-75ad-48c4-aaab-8dd525d3ef7c" executionId="b8211cf0-274c-48eb-8370-0efc447620f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="86d25eb1-459c-4ba5-4f2c-a18933945664" executionId="cc344d0b-7aac-4b49-a27a-efad350cbc25" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="39caabf9-a54e-7b71-48d1-645b16cc37ac" executionId="3e9b7f5d-3858-4ec6-badf-a5626a44b462" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bd5785d3-1ccc-3d16-62fd-a2aeabe021b2" executionId="cbfa4f37-757e-4d9f-acdf-0d490068bc53" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bd620e53-badd-7c7f-0d23-4bc37a7ed142" executionId="d857f848-ac46-4463-b6ed-8835e9274c86" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="47dc2b31-732e-0cb1-4626-3125c24b0c53" executionId="f7ce9b42-bc37-4497-bbbf-ad8686705c77" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="de803369-06ae-051b-ae38-52b02c87494e" executionId="82f6d68b-8bca-40ad-937f-027956736659" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0c003c48-5967-b97b-a4af-ef9fa1b67dfa" executionId="c654bf6d-7b61-4612-97f8-2ee98dd1b2e3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d9120ddd-ea0f-e6a2-9e3e-5d3b1598c5d9" executionId="41599b7d-1b43-4105-bad2-fbd4b0e9fcad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ca169ff2-5fa9-a00e-a0eb-489f3191f805" executionId="90edcd05-79d1-4abd-916f-44f242b508ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="db70474c-7e3e-1798-6b96-106251baeccb" executionId="c60f2f57-8054-47bf-aa0f-54e91a6a4b36" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb9f71d5-5b2f-02b3-436a-813f1c7457f7" executionId="d7547476-98d9-4594-9e69-bff306766a53" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ba8d1c1d-f7b6-8d13-7d25-3d50fdd3258e" executionId="3e93f383-0b7b-48bd-859a-235a95156804" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="75448582-46b9-2956-e4b0-536dd7800f32" executionId="93d9240e-1958-4ac1-b398-1c02ce06138c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="44436cae-869e-1e34-d708-f5b4611c41ec" executionId="5681d47c-fa0d-4036-8945-9010a837dfa8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="324c06cb-75b7-ce20-2b2c-ecc6b432c7ea" executionId="4618fcc8-43d8-49b3-991a-d18a02495727" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e56deaa5-1ec6-01aa-3257-f22503f5b175" executionId="5fa1cf34-8377-464f-b307-023f0126d91b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="56e99657-8178-371d-b621-7829dfc0c18c" executionId="3292ad3e-5188-4f55-9e9a-f302c19b7814" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="31" executed="31" passed="31" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.15)&#xD;
+[xUnit.net 00:00:00.19]   Discovering: QTKD.Tests&#xD;
+[xUnit.net 00:00:00.31]   Discovered:  QTKD.Tests&#xD;
+[xUnit.net 00:00:00.38]   Starting:    QTKD.Tests&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (102ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      DROP DATABASE "QtkdTestDb" WITH (FORCE);&#xD;
+fail: Microsoft.EntityFrameworkCore.Database.Connection[20004]&#xD;
+      An error occurred using the connection to database 'QtkdTestDb' on server 'tcp://localhost:5432'.&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (403ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE DATABASE "QtkdTestDb";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (&#xD;
+          "MigrationId" character varying(150) NOT NULL,&#xD;
+          "ProductVersion" character varying(32) NOT NULL,&#xD;
+          CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "MigrationId", "ProductVersion"&#xD;
+      FROM "__EFMigrationsHistory"&#xD;
+      ORDER BY "MigrationId";&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20261029110229_InitialCreate'.&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE "Customers" (&#xD;
+          "Id" integer GENERATED BY DEFAULT AS IDENTITY,&#xD;
+          "Name" text NOT NULL,&#xD;
+          "Status" text NOT NULL,&#xD;
+          CONSTRAINT "PK_Customers" PRIMARY KEY ("Id")&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE "PriceLists" (&#xD;
+          "Id" integer GENERATED BY DEFAULT AS IDENTITY,&#xD;
+          "Name" text NOT NULL,&#xD;
+          "EffectiveDate" timestamp without time zone NOT NULL,&#xD;
+          CONSTRAINT "PK_PriceLists" PRIMARY KEY ("Id")&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE "Contracts" (&#xD;
+          "Id" integer GENERATED BY DEFAULT AS IDENTITY,&#xD;
+          "ContractNo" text NOT NULL,&#xD;
+          "CustomerId" integer NOT NULL,&#xD;
+          "StartDate" timestamp without time zone NOT NULL,&#xD;
+          "EndDate" timestamp without time zone NOT NULL,&#xD;
+          "Status" text NOT NULL,&#xD;
+          CONSTRAINT "PK_Contracts" PRIMARY KEY ("Id"),&#xD;
+          CONSTRAINT "FK_Contracts_Customers_CustomerId" FOREIGN KEY ("CustomerId") REFERENCES "Customers" ("Id") ON DELETE CASCADE&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE "PriceItems" (&#xD;
+          "Id" integer GENERATED BY DEFAULT AS IDENTITY,&#xD;
+          "PriceListId" integer NOT NULL,&#xD;
+          "ServiceCode" text NOT NULL,&#xD;
+          "UnitPrice" numeric NOT NULL,&#xD;
+          CONSTRAINT "PK_PriceItems" PRIMARY KEY ("Id"),&#xD;
+          CONSTRAINT "FK_PriceItems_PriceLists_PriceListId" FOREIGN KEY ("PriceListId") REFERENCES "PriceLists" ("Id") ON DELETE CASCADE&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Customers" ("Id", "Name", "Status")&#xD;
+      VALUES (1, 'C�ng ty Minh Ph�t', 'Active');&#xD;
+      INSERT INTO "Customers" ("Id", "Name", "Status")&#xD;
+      VALUES (2, 'C�ng ty ABC', 'Active');&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "PriceLists" ("Id", "EffectiveDate", "Name")&#xD;
+      VALUES (1, TIMESTAMP '2026-01-01T00:00:00', 'B?ng gi� 2026');&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Contracts" ("Id", "ContractNo", "CustomerId", "EndDate", "StartDate", "Status")&#xD;
+      VALUES (1, 'HD-2026-018', 1, TIMESTAMP '2027-01-01T00:00:00', TIMESTAMP '2026-01-01T00:00:00', 'Draft');&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "PriceItems" ("Id", "PriceListId", "ServiceCode", "UnitPrice")&#xD;
+      VALUES (1, 1, 'SV01', 100000.0);&#xD;
+      INSERT INTO "PriceItems" ("Id", "PriceListId", "ServiceCode", "UnitPrice")&#xD;
+      VALUES (2, 1, 'SV02', 200000.0);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE INDEX "IX_Contracts_CustomerId" ON "Contracts" ("CustomerId");&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE INDEX "IX_PriceItems_PriceListId" ON "PriceItems" ("PriceListId");&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT setval(&#xD;
+    pg_get_serial_sequence('"Customers"', 'Id'),&#xD;
+    GREATEST(&#xD;
+        (SELECT MAX("Id") FROM "Customers") + 1,&#xD;
+        nextval(pg_get_serial_sequence('"Customers"', 'Id'))),&#xD;
+    false);&#xD;
+      SELECT setval(&#xD;
+    pg_get_serial_sequence('"PriceLists"', 'Id'),&#xD;
+    GREATEST(&#xD;
+        (SELECT MAX("Id") FROM "PriceLists") + 1,&#xD;
+        nextval(pg_get_serial_sequence('"PriceLists"', 'Id'))),&#xD;
+    false);&#xD;
+      SELECT setval(&#xD;
+    pg_get_serial_sequence('"Contracts"', 'Id'),&#xD;
+    GREATEST(&#xD;
+        (SELECT MAX("Id") FROM "Contracts") + 1,&#xD;
+        nextval(pg_get_serial_sequence('"Contracts"', 'Id'))),&#xD;
+    false);&#xD;
+      SELECT setval(&#xD;
+    pg_get_serial_sequence('"PriceItems"', 'Id'),&#xD;
+    GREATEST(&#xD;
+        (SELECT MAX("Id") FROM "PriceItems") + 1,&#xD;
+        nextval(pg_get_serial_sequence('"PriceItems"', 'Id'))),&#xD;
+    false);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")&#xD;
+      VALUES ('20261029110229_InitialCreate', '10.0.14');&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20261104095352_AddWeek06Features'.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      ALTER TABLE "Contracts" ALTER COLUMN "Status" TYPE character varying(50);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      ALTER TABLE "Contracts" ADD "ContractContent" text;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      ALTER TABLE "Contracts" ADD "CurrentApprovalId" text;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      ALTER TABLE "Contracts" ADD "FileUrl" text;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      ALTER TABLE "Contracts" ADD "LastIdempotencyKey" text;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "Contracts" SET "ContractContent" = NULL, "CurrentApprovalId" = NULL, "FileUrl" = NULL, "LastIdempotencyKey" = NULL&#xD;
+      WHERE "Id" = 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")&#xD;
+      VALUES ('20261104095352_AddWeek06Features', '10.0.14');&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\HP\Desktop\C++CodeLearn\HK1-2627\Phat_Trien_UD_HTTT_Hien_Dai\QTKD.Api&#xD;
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]&#xD;
+      Failed to determine the https port for redirect.&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (76ms) [Parameters=[@p0='?', @p1='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Customers" ("Name", "Status")&#xD;
+      VALUES (@p0, @p1)&#xD;
+      RETURNING "Id";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (4ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."Name", c."Status"&#xD;
+      FROM "Customers" AS c&#xD;
+      WHERE c."Id" = @p&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@createdCustomer_Id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."Name", c."Status"&#xD;
+      FROM "Customers" AS c&#xD;
+      WHERE c."Id" = @createdCustomer_Id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT count(*)::int&#xD;
+      FROM "Customers" AS c&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT count(*)::int&#xD;
+      FROM "Customers" AS c&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Customers" ("Name", "Status")&#xD;
+      VALUES (@p0, @p1)&#xD;
+      RETURNING "Id";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."Name", c."Status"&#xD;
+      FROM "Customers" AS c&#xD;
+      WHERE c."Id" = @p&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (9ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Contracts" ("ContractContent", "ContractNo", "CurrentApprovalId", "CustomerId", "EndDate", "FileUrl", "LastIdempotencyKey", "StartDate", "Status")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)&#xD;
+      RETURNING "Id";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "Contracts" SET "ContractContent" = @p0, "ContractNo" = @p1, "CurrentApprovalId" = @p2, "CustomerId" = @p3, "EndDate" = @p4, "FileUrl" = @p5, "LastIdempotencyKey" = @p6, "StartDate" = @p7, "Status" = @p8&#xD;
+      WHERE "Id" = @p9;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "Contracts" SET "ContractContent" = @p0, "ContractNo" = @p1, "CurrentApprovalId" = @p2, "CustomerId" = @p3, "EndDate" = @p4, "FileUrl" = @p5, "LastIdempotencyKey" = @p6, "StartDate" = @p7, "Status" = @p8&#xD;
+      WHERE "Id" = @p9;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@contract_Id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      WHERE c."Id" = @contract_Id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."Name", c."Status"&#xD;
+      FROM "Customers" AS c&#xD;
+      WHERE c."Id" = @p&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Contracts" ("ContractContent", "ContractNo", "CurrentApprovalId", "CustomerId", "EndDate", "FileUrl", "LastIdempotencyKey", "StartDate", "Status")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)&#xD;
+      RETURNING "Id";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "Contracts" SET "ContractContent" = @p0, "ContractNo" = @p1, "CurrentApprovalId" = @p2, "CustomerId" = @p3, "EndDate" = @p4, "FileUrl" = @p5, "LastIdempotencyKey" = @p6, "StartDate" = @p7, "Status" = @p8&#xD;
+      WHERE "Id" = @p9;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@contract_Id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      WHERE c."Id" = @contract_Id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."Name", c."Status"&#xD;
+      FROM "Customers" AS c&#xD;
+      WHERE c."Id" = @p&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Contracts" ("ContractContent", "ContractNo", "CurrentApprovalId", "CustomerId", "EndDate", "FileUrl", "LastIdempotencyKey", "StartDate", "Status")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)&#xD;
+      RETURNING "Id";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@contract_Id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      WHERE c."Id" = @contract_Id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."Name", c."Status"&#xD;
+      FROM "Customers" AS c&#xD;
+      WHERE c."Id" = @p&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Contracts" ("ContractContent", "ContractNo", "CurrentApprovalId", "CustomerId", "EndDate", "FileUrl", "LastIdempotencyKey", "StartDate", "Status")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)&#xD;
+      RETURNING "Id";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@contract_Id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      WHERE c."Id" = @contract_Id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "PriceLists" ("EffectiveDate", "Name")&#xD;
+      VALUES (@p0, @p1)&#xD;
+      RETURNING "Id";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (6ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT p1."Id", p1."EffectiveDate", p1."Name", p0."Id", p0."PriceListId", p0."ServiceCode", p0."UnitPrice"&#xD;
+      FROM (&#xD;
+          SELECT p."Id", p."EffectiveDate", p."Name"&#xD;
+          FROM "PriceLists" AS p&#xD;
+          WHERE p."Id" = @id&#xD;
+          LIMIT 1&#xD;
+      ) AS p1&#xD;
+      LEFT JOIN "PriceItems" AS p0 ON p1."Id" = p0."PriceListId"&#xD;
+      ORDER BY p1."Id"&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "PriceItems" ("PriceListId", "ServiceCode", "UnitPrice")&#xD;
+      VALUES (@p0, @p1, @p2)&#xD;
+      RETURNING "Id";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@priceList_Id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT p."Id", p."PriceListId", p."ServiceCode", p."UnitPrice"&#xD;
+      FROM "PriceItems" AS p&#xD;
+      WHERE p."PriceListId" = @priceList_Id AND p."ServiceCode" = 'SV_PORT'&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."Name", c."Status"&#xD;
+      FROM "Customers" AS c&#xD;
+      WHERE c."Id" = @p&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Contracts" ("ContractContent", "ContractNo", "CurrentApprovalId", "CustomerId", "EndDate", "FileUrl", "LastIdempotencyKey", "StartDate", "Status")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)&#xD;
+      RETURNING "Id";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "Contracts" SET "ContractContent" = @p0, "ContractNo" = @p1, "CurrentApprovalId" = @p2, "CustomerId" = @p3, "EndDate" = @p4, "FileUrl" = @p5, "LastIdempotencyKey" = @p6, "StartDate" = @p7, "Status" = @p8&#xD;
+      WHERE "Id" = @p9;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@contract_Id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      WHERE c."Id" = @contract_Id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."Name", c."Status"&#xD;
+      FROM "Customers" AS c&#xD;
+      WHERE c."Id" = @p&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Contracts" ("ContractContent", "ContractNo", "CurrentApprovalId", "CustomerId", "EndDate", "FileUrl", "LastIdempotencyKey", "StartDate", "Status")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)&#xD;
+      RETURNING "Id";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "Contracts" SET "ContractContent" = @p0, "ContractNo" = @p1, "CurrentApprovalId" = @p2, "CustomerId" = @p3, "EndDate" = @p4, "FileUrl" = @p5, "LastIdempotencyKey" = @p6, "StartDate" = @p7, "Status" = @p8&#xD;
+      WHERE "Id" = @p9;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@contract_Id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      WHERE c."Id" = @contract_Id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."Name", c."Status"&#xD;
+      FROM "Customers" AS c&#xD;
+      WHERE c."Id" = @p&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Contracts" ("ContractContent", "ContractNo", "CurrentApprovalId", "CustomerId", "EndDate", "FileUrl", "LastIdempotencyKey", "StartDate", "Status")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)&#xD;
+      RETURNING "Id";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "Contracts" SET "ContractContent" = @p0, "ContractNo" = @p1, "CurrentApprovalId" = @p2, "CustomerId" = @p3, "EndDate" = @p4, "FileUrl" = @p5, "LastIdempotencyKey" = @p6, "StartDate" = @p7, "Status" = @p8&#xD;
+      WHERE "Id" = @p9;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@contract_Id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      WHERE c."Id" = @contract_Id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."Name", c."Status"&#xD;
+      FROM "Customers" AS c&#xD;
+      WHERE c."Id" = @p&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Contracts" ("ContractContent", "ContractNo", "CurrentApprovalId", "CustomerId", "EndDate", "FileUrl", "LastIdempotencyKey", "StartDate", "Status")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)&#xD;
+      RETURNING "Id";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      UPDATE "Contracts" SET "ContractContent" = @p0, "ContractNo" = @p1, "CurrentApprovalId" = @p2, "CustomerId" = @p3, "EndDate" = @p4, "FileUrl" = @p5, "LastIdempotencyKey" = @p6, "StartDate" = @p7, "Status" = @p8&#xD;
+      WHERE "Id" = @p9;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@contract_Id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      WHERE c."Id" = @contract_Id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."Name", c."Status"&#xD;
+      FROM "Customers" AS c&#xD;
+      WHERE c."Id" = @p&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?' (DbType = DateTime), @p8='?'], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Contracts" ("ContractContent", "ContractNo", "CurrentApprovalId", "CustomerId", "EndDate", "FileUrl", "LastIdempotencyKey", "StartDate", "Status")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)&#xD;
+      RETURNING "Id";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status", c0."Id", c0."Name", c0."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      INNER JOIN "Customers" AS c0 ON c."CustomerId" = c0."Id"&#xD;
+      WHERE c."Id" = @id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (1ms) [Parameters=[@contract_Id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT c."Id", c."ContractContent", c."ContractNo", c."CurrentApprovalId", c."CustomerId", c."EndDate", c."FileUrl", c."LastIdempotencyKey", c."StartDate", c."Status"&#xD;
+      FROM "Contracts" AS c&#xD;
+      WHERE c."Id" = @contract_Id&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:06.29]   Finished:    QTKD.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
